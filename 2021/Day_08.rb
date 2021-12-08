@@ -43,6 +43,20 @@ end
 
 numbers = []
 
+=begin
+
+  Segment Display Configuration
+  
+   1111
+  2    3
+  2    3
+   4444
+  5    6
+  5    6
+   7777
+   
+=end
+
 digits.each do |pair|
   segment_board = { 1 => ' ', 2 => ' ', 3 => ' ', 4 => ' ',
                     5 => ' ', 6 => ' ', 7 => ' ' }
