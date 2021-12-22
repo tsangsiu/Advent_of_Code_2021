@@ -43,7 +43,11 @@ packet = (input.split('').map do |hex|
   HEX_TO_BIN[hex]
 end).join
 
-def read_packet(stack, packet, length_subpacket = 0, n_subpacket = 0, stack_track)
+def read_packet(stack_track, stack, packet_ids, packet_id, length_subpacket = 0, n_subpacket = 0, packet)
+  if stack_track != []
+    packet_ids = packet_ids.clone[0...-1] if stack_track.last.values == [0]
+  end
+
   version = packet[0..2].to_i(2); packet = trim_digits(packet, 3); deduct_length_subpacket(stack_track, 3)
   type = packet[0..2].to_i(2); packet = trim_digits(packet, 3); deduct_length_subpacket(stack_track, 3)
   if type != 4
@@ -51,13 +55,15 @@ def read_packet(stack, packet, length_subpacket = 0, n_subpacket = 0, stack_trac
   end
 
   if type != 4  # operator packet
-    if id == 0
+    if id == 0  # next 15 bits represents the total length in bits of the sub-packets
       deduct_length_subpacket(stack_track, 15); deduct_n_packet(stack_track, 1)
       length_subpacket = packet[0..14].to_i(2); packet = trim_digits(packet, 15)
+      packet_id += 1; packet_ids = (packet_ids.clone << packet_id)
       stack_track << { length_subpacket: length_subpacket }
-    elsif id == 1
+    elsif id == 1  # next 11 bits represents the number of sub-packets
       deduct_length_subpacket(stack_track, 11); deduct_n_packet(stack_track, 1)
       n_subpacket = packet[0..10].to_i(2); packet = trim_digits(packet, 11)
+      packet_id += 1; packet_ids = (packet_ids.clone << packet_id)
       stack_track << { n_subpacket: n_subpacket }
     end
   elsif type == 4  # literal value
@@ -73,9 +79,7 @@ def read_packet(stack, packet, length_subpacket = 0, n_subpacket = 0, stack_trac
     value = value.to_i(2)
   end
 
-  stack << { version: version, type: type, id: id, length_subpacket: length_subpacket, n_subpacket: n_subpacket, value: value }
-  # display(stack_track)
-  # display(stack)
+  stack << { packet_ids: packet_ids, version: version, type: type, id: id, length_subpacket: length_subpacket, n_subpacket: n_subpacket, value: value }
 
   is_continue = false
   stack_track.each do |hash|
@@ -87,15 +91,17 @@ def read_packet(stack, packet, length_subpacket = 0, n_subpacket = 0, stack_trac
     end
   end
 
-  read_packet(stack, packet, 0, 0, stack_track) if is_continue || (packet.length > 0 && packet.split('').uniq != ['0'])
+  read_packet(stack_track, stack, packet_ids, packet_id, 0, 0, packet) if is_continue || (packet.length > 0 && packet.split('').uniq != ['0'])
 end
 
-stack = []; stack_track = []
-read_packet(stack, packet, 0, 0, stack_track)
-# display(stack)
+stack = []; stack_track = []; packet_ids = []; packet_id = 0
+read_packet(stack_track, stack, packet_ids, packet_id, 0, 0, packet)
+display(stack)  ###
 
 version_sum = 0
 stack.each do |element|
   version_sum += element[:version]
 end
 p version_sum
+
+### Part 2 ###
