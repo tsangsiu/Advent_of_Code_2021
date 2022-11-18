@@ -1,0 +1,41 @@
+        G - H       J - K - L
+       /           /
+COM - B - C - D - E - F
+               \
+                I
+
+COM)B
+B)C
+C)D
+D)E
+E)F
+B)G
+G)H
+D)I
+E)J
+J)K
+K)L
+
+COM)B)C)D)E)F   => 1 + 2 + 3 + 4 + 5
+B)G)H           => 1 + 2 + (2 * 1)
+D)I             => 1 + (1 * 3)
+E)J)K)L         => 1 + 2 + 3 + (3 * 4)
+
+=====
+
+Part 1
+
+Steps:
+- Reorganize the given input
+- For each list (branch), count the orbits
+
+To count:
+- For each branch,
+  - Calculate (#object - 1) * #object / 2
+  - Until we get to the main branch (the one that starts with COM)
+    - Locate the branch the contains the current branch head, excluding the current branch
+    - Calculate (#object - 1) * (the index position of the head of the current branch of the located branch)
+    - Repeat the above with the located branch
+- Sum the above
+
+=====
