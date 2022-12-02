@@ -5,9 +5,9 @@
 ## Completion Status
 
 | Day | Part 1 | Part 2 |
-| --- | --- | --- |
-| 1 | :white_check_mark: | :white_check_mark: |
-| 2 | | |
+| :---: | :---: | :---: |
+| 1 | :star: | :star: |
+| 2 | :star: | :star: |
 | 3 | | |
 | 4 | | |
 | 5 | | |
