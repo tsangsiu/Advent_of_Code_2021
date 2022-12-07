@@ -21,7 +21,15 @@ end
 end
 
 # another way to do it using the build-in method `each_cons`
+
 offset = 4
 puts (input.chars.each_cons(offset).with_index do |char, index|
-  break index + offset if char.sort == char.uniq.sort
+  break index + offset if char.uniq.size == offset
 end)
+
+# using `find_index`
+
+offset = 4
+puts (input.chars.each_cons(offset).find_index do |char|
+  char.uniq.size == offset
+end) + offset
