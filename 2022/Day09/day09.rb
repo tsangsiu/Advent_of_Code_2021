@@ -113,8 +113,6 @@ puts tail_visited.uniq.size
 
 # part 2
 
-
-
 def tail_new_vertical_pos(head_pos, tail_pos)
   y_head = head_pos[1]
   y_tail = tail_pos[1]
