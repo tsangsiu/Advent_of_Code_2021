@@ -16,7 +16,7 @@
 | [08. Treetop Tree House](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day08/day08.rb) | :star: | :star: |
 | [09. Rope Bridge](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day09/day09.rb) | :star: | :star: |
 | [10. Cathode-Ray Tube](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day10/day10.rb) | :star: | :star: |
-| [11. Monkey in the Middle](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day10/day11.rb) | :star: | :star: |
+| [11. Monkey in the Middle](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day11/day11.rb) | :star: | :star: |
 | 12 | | |
 | 13 | | |
 | 14 | | |
