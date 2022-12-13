@@ -18,7 +18,7 @@
 | [10. Cathode-Ray Tube](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day10/day10.rb) | :star: | :star: |
 | [11. Monkey in the Middle](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day11/day11.rb) | :star: | :star: |
 | [12. Hill Climbing Algorithm](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day12/day12.rb) | :star: | :star: |
-| 13 | | |
+| [13. Distress Signal](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day13/day13.rb) | :star: | :star: |
 | 14 | | |
 | 15 | | |
 | 16 | | |
