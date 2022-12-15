@@ -20,7 +20,7 @@
 | [12. Hill Climbing Algorithm](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day12/day12.rb) | :star: | :star: |
 | [13. Distress Signal](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day13/day13.rb) | :star: | :star: |
 | [14. Regolith Reservoir](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day14/day14.rb) | :star: | :star: |
-| 15 | | |
+| [15. Beacon Exclusion Zone](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day15/day15.rb) | :star: | :star: |
 | 16 | | |
 | 17 | | |
 | 18 | | |
