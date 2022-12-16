@@ -68,7 +68,7 @@ end
 negative_pairs.uniq!
 
 # for the input, there is only one pair of lines that are 2 units apart
-# if there are more than 1 pair, this code might break
+# if there are more than 1 pair, this code will break
 x = (negative_pairs[0].sum / 2 - positive_pairs[0].sum / 2) / 2
 y = (negative_pairs[0].sum / 2 + positive_pairs[0].sum / 2) / 2
 
