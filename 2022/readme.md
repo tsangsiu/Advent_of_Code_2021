@@ -22,7 +22,7 @@
 | [14. Regolith Reservoir](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day14/day14.rb) | :star: | :star: |
 | [15. Beacon Exclusion Zone](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day15/day15.rb) | :star: | :star: |
 | [16. Proboscidea Volcanium](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day16/day16.rb) | | |
-| 17 | | |
+| [17. Pyroclastic Flow](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day17/day17.rb) | :star: | |
 | 18 | | |
 | 19 | | |
 | 20 | | |
