@@ -6,7 +6,6 @@ input = File.read("input.txt").chomp.split("\n")
 
 # minerals = [ore, clay, obsidian, geode]
 #              0     1       2       3
-# index of the blueprints/max_speed array + 1 = blueprint ID
 
 def solve(blueprint, time)
   # cost for each kind of robot
@@ -54,7 +53,6 @@ def solve(blueprint, time)
       # we have the robot, but not the minerals
       # to figure out how long we need to wait for the minerals
       # optimisation here
-      # [blueprint.split[6].to_i, 0, 0, 0],
       wait_time = (costs[mineral].map.with_index do |cost, index|
         cost > 0 && robots[index] > 0 ? ((cost - minerals[index]).to_f / robots[index]).ceil.to_i : 0
       end + [0]).max  # + [0] here, when all negative we will get 0
@@ -67,7 +65,7 @@ def solve(blueprint, time)
       end
       new_robots = robots.clone; new_robots[mineral] += 1
 
-      # what if I have minerals that I don't need at all?
+      # another optimisation here: what if I have minerals that I don't need at all?
       (0..2).each do |mineral|
         new_minerals[mineral] = [new_minerals[mineral], max_spend[mineral] * (time - wait_time - 1)].min
       end
@@ -85,7 +83,7 @@ end
 
 answer = 0
 input.each_with_index do |line, index|
-  puts index
+  puts index  # it lets me know the progress
   answer += (index + 1) * solve(line, 24)
 end
 
