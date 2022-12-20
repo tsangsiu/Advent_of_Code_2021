@@ -2,87 +2,103 @@
 ### input
 ###
 
-input = File.read("inputex.txt").chomp.split("\n")
-
-###
-### part 1
-###
+input = File.read("input.txt").chomp.split("\n")
 
 # minerals = [ore, clay, obsidian, geode]
 #              0     1       2       3
 # index of the blueprints/max_speed array + 1 = blueprint ID
 
-# depth-first search
-def solve(blueprint, max_spend, memo, time, robots, minerals)
-  return minerals[3] if time == 0
+def solve(blueprint, time)
+  # cost for each kind of robot
+  costs = [
+    [blueprint.split[6].to_i, 0, 0, 0],
+    [blueprint.split[12].to_i, 0, 0, 0],
+    [blueprint.split[18].to_i, blueprint.split[21].to_i, 0, 0],
+    [blueprint.split[27].to_i, 0, blueprint.split[30].to_i, 0]
+  ]
 
-  # memoization
-  key = [time, robots, minerals]
-  return memo[key] if memo.key?(key)
+  # breadth-first search
+  queue = []
+  queue << [time, [0, 0, 0, 0], [1, 0, 0, 0]] # initial state: [time, minerals, robots]
+  seen = Hash.new(false)
+  best = 0
+  max_spend = [
+    [blueprint.split[6].to_i, blueprint.split[12].to_i, blueprint.split[18].to_i, blueprint.split[27].to_i].max,
+    blueprint.split[21].to_i,
+    blueprint.split[30].to_i,
+    Float::INFINITY
+  ] # optimisation here
 
-  # if not store, calculate it
-  max_score = minerals[3] + robots[3] * time # amount of geode when we do nothing
+  until queue.empty?
+    time, minerals, robots = queue.shift
 
-  blueprint.each_with_index do |recipe, mineral|
-    next if mineral != 3 && robots[mineral] >= max_spend[mineral] # optimization 1, we don't need more
+    # the minmum number of geodes left at the current state
+    minimum_geodes_left = minerals[3] + (time * robots[3])
+    best = minimum_geodes_left if minimum_geodes_left > best
 
-    # optimization 2
-    # instead of reduce the time by 1, see how much time we need to build the robot
-    # and immediately jump to that state if possible
-    wait_time = 0
-    recipe.each_with_index do |resource_amount, resource_type|
-      break if robots[resource_type] == 0
-      # ceiling because we want more instead of less
-      # calculated wait time can be negative
-      p resource_amount ###
-      # wait_time = [wait_time, ((resource_amount - minerals[resource_type]).to_f / robots[resource_type]).ceil].max
+    next if time == 0 || seen[[time, minerals, robots]]
+    seen[[time, minerals, robots]] = true
 
-      # if resource_type == 3 # run after last iteration
-      #   remaining_time = time - wait_time - 1
-      #   next if remaining_time <= 0
-      #   _robots = robots.clone
-      #   _minerals = [minerals[0] + robots[0] * (wait_time + 1),
-      #                 minerals[1] + robots[1] * (wait_time + 1),
-      #                 minerals[2] + robots[2] * (wait_time + 1),
-      #                 minerals[3] + robots[3] * (wait_time + 1)]
-      #   recipe.each do |resource_amount, resource_type|
-      #     _minerals[resource_type] -= resource_amount
-      #   end
-      #   _robots[mineral] += 1
-      #   (0..2).each do |i|
-      #     _minerals[i] = [_minerals[i], max_spend[i] * remaining_time].min
-      #   end
-      #   max_score = [max_score, solve(blueprint, max_spend, memo, remaining_time, _robots, _minerals)].max
-      # end
+    # for each mineral
+    (0..3).each do |mineral|
+      # we have enough of this robot?
+      next if robots[mineral] >= max_spend[mineral]
+
+      # to check if we have the robots to get to where we need to be to build the minerals next
+
+      # for a particular mineral
+      # check for its cost, and see we have that robot
+      # go to the next mineral if we don't have that robot
+      next if costs[mineral].zip(robots).any? { |costs_robots_pair| costs_robots_pair[0] > 0 && costs_robots_pair[1] == 0 }
+
+      # we have the robot, but not the minerals
+      # to figure out how long we need to wait for the minerals
+      # optimisation here
+      # [blueprint.split[6].to_i, 0, 0, 0],
+      wait_time = (costs[mineral].map.with_index do |cost, index|
+        cost > 0 && robots[index] > 0 ? ((cost - minerals[index]).to_f / robots[index]).ceil.to_i : 0
+      end + [0]).max  # + [0] here, when all negative we will get 0
+
+      next if time - wait_time - 1 <= 0
+
+      # to build a new robot
+      new_minerals = minerals.map.with_index do |old_mineral, index|
+        old_mineral + robots[index] * (wait_time + 1) - costs[mineral][index]
+      end
+      new_robots = robots.clone; new_robots[mineral] += 1
+
+      # what if I have minerals that I don't need at all?
+      (0..2).each do |mineral|
+        new_minerals[mineral] = [new_minerals[mineral], max_spend[mineral] * (time - wait_time - 1)].min
+      end
+      
+      queue << [time - wait_time - 1, new_minerals, new_robots]
     end
   end
 
-  memo[key] = max_score
-  max_score
+  best
 end
 
-total = 0
-blueprints = []
-# the maximum mineral needed to spend every round for each mineral (for optimization)
-# we don't need to keep track of geode, we want it as most as possible
-max_spend = []
-input.each_with_index do |line, id|
-  line = line.split
-  blueprints[id] = [[[line[6].to_i, 0]]]
-  blueprints[id] << [[line[12].to_i, 0]]
-  blueprints[id] << [[line[18].to_i, 0], [line[21].to_i, 1]]
-  blueprints[id] << [[line[27].to_i, 0], [line[30].to_i, 2]]
+###
+### part 1
+###
 
-  max_spend[id] = [[line[6].to_i, line[12].to_i, line[18].to_i, line[27].to_i].max]
-  max_spend[id] << line[21].to_i
-  max_spend[id] << line[30].to_i
-
-  score = solve(blueprints[id], max_spend[id], Hash.new(false), 24, [1, 0, 0, 0], [0, 0, 0, 0])
-  total += (id + 1) * score
+answer = 0
+input.each_with_index do |line, index|
+  puts index
+  answer += (index + 1) * solve(line, 24)
 end
 
-puts total
+p answer
 
 ###
 ### part 2
 ###
+
+answer = 1
+input[0..2].each_with_index do |line, index|
+  puts index
+  answer *= solve(line, 32)
+end
+
+p answer
