@@ -1,6 +1,6 @@
 ### input
 
-jets = File.read("inputex.txt").chomp.split('')
+jets = File.read("input.txt").chomp.split('')
 
 ### class
 
@@ -14,7 +14,7 @@ class Tower
     @tower = [Array.new(WIDTH, AIR)]
   end
 
-  def top_empty_row
+  def height
     tower.index { |layer| layer.all? { |point| point == AIR } }
   end
 
@@ -50,7 +50,7 @@ class Horizontal < Rock
 
   def initialize(tower)
     @tower = tower
-    @x = 2; @y = tower.top_empty_row + 3
+    @x = 2; @y = tower.height + 3
     draw(FALLING_ROCK)
     @can_fall = true
   end
@@ -107,7 +107,7 @@ class Cross < Rock
 
   def initialize(tower)
     @tower = tower
-    @x = 2; @y = tower.top_empty_row + 4
+    @x = 2; @y = tower.height + 4
     draw(FALLING_ROCK)
     @can_fall = true
   end
@@ -173,7 +173,7 @@ class L < Rock
 
   def initialize(tower)
     @tower = tower
-    @x = 2; @y = tower.top_empty_row + 3
+    @x = 2; @y = tower.height + 3
     draw(FALLING_ROCK)
     @can_fall = true
   end
@@ -236,7 +236,7 @@ class Vertical < Rock
 
   def initialize(tower)
     @tower = tower
-    @x = 2; @y = tower.top_empty_row + 3
+    @x = 2; @y = tower.height + 3
     draw(FALLING_ROCK)
     @can_fall = true
   end
@@ -302,7 +302,7 @@ class Square < Rock
 
   def initialize(tower)
     @tower = tower
-    @x = 2; @y = tower.top_empty_row + 3
+    @x = 2; @y = tower.height + 3
     draw(FALLING_ROCK)
     @can_fall = true
   end
@@ -383,6 +383,56 @@ index = 0
   end
 end
 
-p tower.top_empty_row
+p tower.height
 
 ### part 2
+
+SAMPLING_ROW = 400
+signatures = {}
+signature_id = 0
+heights = []  # for calculating the height of the remaining rocks stopped
+
+tower = Tower.new
+index = 0
+
+1.upto(4000) do |n| # the number needs to be big enough to capture repeated patterns
+  case n % 5
+  when 1 then rock = Horizontal.new(tower)
+  when 2 then rock = Cross.new(tower)
+  when 3 then rock = L.new(tower)
+  when 4 then rock = Vertical.new(tower)
+  when 0 then rock = Square.new(tower)
+  end
+
+  until rock.can_fall == false
+    jet = jets[index % jets.size]
+    case jet
+    when "<"
+      rock.left
+    when ">"
+      rock.right
+    end
+    rock.fall
+
+    index += 1
+  end
+
+  heights[n] = tower.height
+
+  # after a rock is settled, find the pattern
+  next if tower.height < SAMPLING_ROW
+  signature = tower.tower[(tower.height - SAMPLING_ROW)...tower.height]
+  signature_id = signatures.key?(signature) ? signatures[signature][:id] : signature_id + 1
+  signatures[signature] = { id: signature_id, height: tower.height, rocks_stopped: n }
+end
+
+# consider only the repeat pattern with the maximum ID
+patterns = signatures.values.select { |info| info[:id] == signature_id }
+
+rocks_stopped = patterns[0][:rocks_stopped]
+delta_rocks = patterns[1][:rocks_stopped] - patterns[0][:rocks_stopped]
+delta_height = patterns[1][:height] - patterns[0][:height]
+
+answer = (1_000_000_000_000 - rocks_stopped) / delta_rocks * delta_height +
+          heights[rocks_stopped + (1_000_000_000_000 - rocks_stopped) % delta_rocks]
+puts answer
