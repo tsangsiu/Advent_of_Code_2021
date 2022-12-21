@@ -26,7 +26,7 @@
 | [18. Boiling Boulders](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day18/day18.rb) | :star: | :star:* |
 | [19. Not Enough Minerals](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day19/day19.rb) | :star:* | :star:* |
 | [20. Grove Positioning System](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day20/day20.rb) | :star: | :star: |
-| 21 | | |
+| [21. Monkey Math](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day21/day21.rb) | :star: | :star: |
 | 22 | | |
 | 23 | | |
 | 24 | | |
