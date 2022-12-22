@@ -27,7 +27,7 @@
 | [19. Not Enough Minerals](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day19/day19.rb) | :star:* | :star:* |
 | [20. Grove Positioning System](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day20/day20.rb) | :star: | :star: |
 | [21. Monkey Math](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day21/day21.rb) | :star: | :star: |
-| 22 | | |
+| [22. Monkey Map](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day22) | :star: | :star: |
 | 23 | | |
 | 24 | | |
 | 25 | | |
