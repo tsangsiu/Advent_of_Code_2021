@@ -28,7 +28,7 @@
 | [20. Grove Positioning System](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day20/day20.rb) | :star: | :star: |
 | [21. Monkey Math](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day21/day21.rb) | :star: | :star: |
 | [22. Monkey Map](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day22) | :star: | :star: |
-| [23. Unstable Diffusion](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day23/day23.rb) | :star: | |
+| [23. Unstable Diffusion](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day23/day23.rb) | :star: | :star: |
 | [24. Blizzard Basin](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day24/day24.rb) | :star: | :star: |
 | 25 | | |
 
