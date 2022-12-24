@@ -28,8 +28,8 @@
 | [20. Grove Positioning System](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day20/day20.rb) | :star: | :star: |
 | [21. Monkey Math](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day21/day21.rb) | :star: | :star: |
 | [22. Monkey Map](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day22) | :star: | :star: |
-| 23 | | |
-| 24 | | |
+| [23. Unstable Diffusion](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day23/day23.rb) | :star: | |
+| [24. Blizzard Basin](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day24/day24.rb) | :star: | :star: |
 | 25 | | |
 
 ## Remark
@@ -37,3 +37,7 @@
 ### Day 18
 
 - The algorithm may not give the right answer when the lava is a hook-like shape. Flood fill algorithm might be a better algorithm for lava of general shapes.
+
+### Day 24
+
+- Strangely, my code for part 2 works for the actual input, but not the test input.
