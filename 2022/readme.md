@@ -30,7 +30,7 @@
 | [22. Monkey Map](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day22) | :star: | :star: |
 | [23. Unstable Diffusion](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day23/day23.rb) | :star: | :star: |
 | [24. Blizzard Basin](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day24/day24.rb) | :star: | :star: |
-| 25 | | |
+| [25. Full of Hot Air](https://github.com/tsangsiu/Advent_of_Code/blob/main/2022/Day25/day25.rb) | :star:* | :star: |
 
 ## Remark
 
