@@ -7,7 +7,7 @@ This is my first year doing Advent of Code!
 ## Completion Status
 
 | Day | Part 1 | Part 2 |
-| --- | --- | --- |
+| --- | :---: | :---: |
 | 1 | :white_check_mark: | :white_check_mark: |
 | 2 | :white_check_mark: | :white_check_mark: |
 | 3 | :white_check_mark: | :white_check_mark: |
@@ -33,3 +33,9 @@ This is my first year doing Advent of Code!
 | 23 | | |
 | 24 | | |
 | 25 | | |
+
+## Remark
+
+### Day 15
+
+- Used the Dijkstra's algorithm, still haven't got the answer correct.
