@@ -14,6 +14,7 @@
 | [06. Custom Customs](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day06/day06.rb) | :star: | :star: |
 | [07. Handy Haversacks](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day07/day07.rb) | :star: | :star: |
 | [08. Handheld Halting](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day08/day08.rb) | :star: | :star: |
+| [09. Encoding Error](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day09/day09.rb) | :star: | :star: |
 
 ## Remark
 
