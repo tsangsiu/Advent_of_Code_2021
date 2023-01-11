@@ -15,10 +15,15 @@
 | [07. Handy Haversacks](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day07/day07.rb) | :star: | :star: |
 | [08. Handheld Halting](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day08/day08.rb) | :star: | :star: |
 | [09. Encoding Error](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day09/day09.rb) | :star: | :star: |
-| [10. Adapter Array*](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day10/day10.rb) | :star: | :star: |
+| [10. Adapter Array](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day10/day10.rb)* | :star: | :star: |
+| [11. Seating System](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day11/day11.rb) | :star: | :star: |
 
 ## Remark
 
 ### Day 07
 
 - Try memoization
+
+### Day 11
+
+- A more efficient way of matrix manipulation?
