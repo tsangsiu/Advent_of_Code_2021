@@ -22,6 +22,7 @@
 | [14. Docking Data](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day14/day14.rb) | :star: | :star: |
 | [15. Rambunctious Recitation](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day15/day15.rb) | :star: | :star: |
 | [16. Ticket Translation](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day16/day16.rb) | :star: | :star: |
+| [17. Conway Cubes](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day17/day17.rb) | :star: | :star: |
 
 ## Remark
 
