@@ -19,6 +19,7 @@
 | [11. Seating System](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day11/day11.rb) | :star: | :star: |
 | [12. Rain Risk](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day12/day12.rb) | :star: | :star: |
 | [13. Shuttle Search](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day13/day13.rb) | :star: | :star:* |
+| [14. Docking Data](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day14/day14.rb) | :star: | :star:* |
 
 ## Remark
 
