@@ -18,6 +18,7 @@
 | [10. Adapter Array](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day10/day10.rb)* | :star: | :star: |
 | [11. Seating System](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day11/day11.rb) | :star: | :star: |
 | [12. Rain Risk](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day12/day12.rb) | :star: | :star: |
+| [13. Shuttle Search](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day13/day13.rb) | :star: | :star:* |
 
 ## Remark
 
