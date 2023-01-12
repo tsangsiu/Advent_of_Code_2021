@@ -21,6 +21,7 @@
 | [13. Shuttle Search](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day13/day13.rb) | :star: | :star:* |
 | [14. Docking Data](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day14/day14.rb) | :star: | :star: |
 | [15. Rambunctious Recitation](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day15/day15.rb) | :star: | :star: |
+| [16. Ticket Translation](https://github.com/tsangsiu/Advent_of_Code/blob/main/2020/Day16/day16.rb) | :star: | :star: |
 
 ## Remark
 
