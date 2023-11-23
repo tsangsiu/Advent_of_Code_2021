@@ -12,12 +12,12 @@
 | 4 | :white_check_mark: | :white_check_mark: | |
 | 5 | :white_check_mark: | :white_check_mark: | |
 | 6 | :white_check_mark: | :white_check_mark: | |
-| 7 | :white_check_mark: | :white_check_mark: | Recursion and Memoization|
+| 7 | :white_check_mark: | :white_check_mark: | Recursion and Memoization |
 | 8 | :white_check_mark: | :white_check_mark:* | |
 | 9 | | | |
 | 10 | :white_check_mark: | :white_check_mark: | |
 | 11 | :white_check_mark: | :white_check_mark: | |
-| 12 | | | |
+| 12 | :white_check_mark: | :white_check_mark: | Recursion |
 | 13 | | | |
 | 14 | | | |
 | 15 | | | |
