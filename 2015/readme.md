@@ -13,9 +13,9 @@
 | 5 | :white_check_mark: | :white_check_mark: | |
 | 6 | :white_check_mark: | :white_check_mark: | |
 | 7 | :white_check_mark: | :white_check_mark: | Recursion and Memoization|
-| 6 | :white_check_mark: | :white_check_mark:* | |
+| 8 | :white_check_mark: | :white_check_mark:* | |
 | 9 | | | |
-| 10 | | | |
+| 10 | :white_check_mark: | :white_check_mark: | |
 | 11 | | | |
 | 12 | | | |
 | 13 | | | |

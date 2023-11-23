@@ -1,4 +1,19 @@
-### parts 1 & 2
+### part 1
+
+seq = "1113122113"
+
+40.times do
+  next_seq = ""
+  grps = seq.chars.slice_when { |a, b| a != b }.to_a
+  grps.each do |grp|
+    next_seq << grp.size.to_s << grp.first
+  end
+  seq = next_seq
+end
+
+p seq.length
+
+### part 2
 
 seq = "1113122113"
 
