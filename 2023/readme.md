@@ -7,7 +7,7 @@
 | Day | Part 1 | Part 2 |
 | --- | :---: | :---: |
 | [01. Trebuchet?!](https://github.com/tsangsiu/Advent_of_Code/blob/main/2023/Day01/day01.rb) | :star: | :star: |
-| 02 | | |
+| [02. Cube Conundrum](https://github.com/tsangsiu/Advent_of_Code/blob/main/2023/Day02/day02.rb) | :star: | :star: |
 | 03 | | |
 | 04 | | |
 | 05 | | |
