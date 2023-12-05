@@ -10,7 +10,7 @@
 | [02. Cube Conundrum](https://github.com/tsangsiu/Advent_of_Code/blob/main/2023/Day02/day02.rb) | :star: | :star: |
 | [03. Gear Ratios](https://github.com/tsangsiu/Advent_of_Code/blob/main/2023/Day03/day03.rb) | :star: | :star: |
 | [04. Scratchcards](https://github.com/tsangsiu/Advent_of_Code/blob/main/2023/Day04/day04.rb) | :star: | :star: |
-| 05 | | |
+| [05. If You Give A Seed A Fertilizer](https://github.com/tsangsiu/Advent_of_Code/blob/main/2023/Day05/day05.rb) | :star: | :star:* |
 | 06 | | |
 | 07 | | |
 | 08 | | |
@@ -33,3 +33,7 @@
 | 25 | | |
 
 ## Remark
+
+### Day 5
+
+- Can also try implementing the algorithm as stated [here](https://www.reddit.com/r/adventofcode/comments/18b6wnx/2023_day_5_part_2_for_anyone_whos_reading_the/).
