@@ -11,7 +11,7 @@
 | [03. Gear Ratios](https://github.com/tsangsiu/Advent_of_Code/blob/main/2023/Day03/day03.rb) | :star: | :star: |
 | [04. Scratchcards](https://github.com/tsangsiu/Advent_of_Code/blob/main/2023/Day04/day04.rb) | :star: | :star: |
 | [05. If You Give A Seed A Fertilizer](https://github.com/tsangsiu/Advent_of_Code/blob/main/2023/Day05/day05.rb) | :star: | :star:* |
-| 06 | | |
+| [06. Wait For It](https://github.com/tsangsiu/Advent_of_Code/blob/main/2023/Day06/day06.rb) | :star: | :star: |
 | 07 | | |
 | 08 | | |
 | 09 | | |
