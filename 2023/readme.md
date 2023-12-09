@@ -14,7 +14,7 @@
 | [06. Wait For It](https://github.com/tsangsiu/Advent_of_Code/blob/main/2023/Day06/day06.rb) | :star: | :star: |
 | [07. Camel Cards](https://github.com/tsangsiu/Advent_of_Code/blob/main/2023/Day07/day07.rb) | :star: | :star: |
 | [08: Haunted Wasteland](https://github.com/tsangsiu/Advent_of_Code/blob/main/2023/Day08/day08.rb) | :star: | :star:* |
-| 09 | | |
+| [09: Mirage Maintenance](https://github.com/tsangsiu/Advent_of_Code/blob/main/2023/Day09/day09.rb) | :star: | :star: |
 | 10 | | |
 | 11 | | |
 | 12 | | |
