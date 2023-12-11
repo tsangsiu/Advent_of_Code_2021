@@ -16,7 +16,7 @@
 | [08: Haunted Wasteland](https://github.com/tsangsiu/Advent_of_Code/blob/main/2023/Day08/day08.rb) | :star: | :star:* |
 | [09: Mirage Maintenance](https://github.com/tsangsiu/Advent_of_Code/blob/main/2023/Day09/day09.rb) | :star: | :star: |
 | 10 | | |
-| 11 | | |
+| [11: Cosmic Expansion](https://github.com/tsangsiu/Advent_of_Code/blob/main/2023/Day11/day11.rb) | :star: | :star: |
 | 12 | | |
 | 13 | | |
 | 14 | | |
