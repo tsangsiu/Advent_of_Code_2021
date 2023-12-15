@@ -20,7 +20,7 @@
 | 12 | | |
 | 13 | | |
 | 14 | | |
-| 15 | | |
+| [15: Lens Library](https://github.com/tsangsiu/Advent_of_Code/blob/main/2023/Day15/day15.rb) | :star: | :star: |
 | 16 | | |
 | 17 | | |
 | 18 | | |
