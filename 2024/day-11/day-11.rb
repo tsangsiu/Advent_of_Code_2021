@@ -1,33 +1,50 @@
-# Input
-
-input = File.read("input.txt")
-stones = input.split(" ").map { |stone| stone.to_i }
-
-def change(stone)
-  stone_s = stone.to_s
-  if stone == 0
+def change(num)
+  num_s = num.to_s
+  if num == 0
     1
-  elsif stone_s.length % 2 == 0
-    [stone_s[0...(stone_s.length / 2)].to_i, stone_s[(stone_s.length / 2)..].to_i]
+  elsif num_s.length % 2 == 0
+    [num_s[0...(num_s.length / 2)].to_i, num_s[(num_s.length / 2)..].to_i]
   else
-    stone * 2024
+    num * 2024
   end
 end
 
 # Part 1
 
-memo = Hash.new(nil)
+input = File.read("input.txt")
+stones = input.split(" ").map { |num| num.to_i }.tally
 
-25.times do |idx|
-  stones.map! do |stone|
-    if memo[stone].nil?
-      change = change(stone)
-      memo[stone] = change
-      change
-    else
-      memo[stone]
+25.times do
+  stones = stones.to_a
+  stones = stones.map { |num, tally| [change(num), tally] }.to_h
+  stones.dup.each_pair do |num, tally|
+    next unless num.class == Array
+    num.each do |num|
+      stones.has_key?(num) ? stones[num] += tally : stones[num] = tally
     end
-  end.flatten!
+  end
+  stones.delete_if { |num, _| num.class == Array }
+  stones = stones.to_h
 end
 
-puts stones.size
+p stones.values.sum
+
+# Part 2
+
+input = File.read("input.txt")
+stones = input.split(" ").map { |num| num.to_i }.tally
+
+75.times do
+  stones = stones.to_a
+  stones = stones.map { |num, tally| [change(num), tally] }.to_h
+  stones.dup.each_pair do |num, tally|
+    next unless num.class == Array
+    num.each do |num|
+      stones.has_key?(num) ? stones[num] += tally : stones[num] = tally
+    end
+  end
+  stones.delete_if { |num, _| num.class == Array }
+  stones = stones.to_h
+end
+
+p stones.values.sum
