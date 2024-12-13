@@ -15,3 +15,7 @@
 ## Day 12
 
 - I have no idea... yet.
+
+## Day 13
+
+- Hint: System of linear equations
