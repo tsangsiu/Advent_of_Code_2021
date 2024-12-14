@@ -19,3 +19,7 @@
 ## Day 13
 
 - Hint: System of linear equations
+
+## Day 14
+
+- [Part 2] Hints needed
