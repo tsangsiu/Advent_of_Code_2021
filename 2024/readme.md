@@ -27,3 +27,7 @@
 ## Day 17
 
 - [Part 2] Hints needed // Trial and Error - Narrowing down the answer by observing the last digits of the programs, one at a time.
+
+## Day 22
+
+- [Part 2] 19h execution time for part 2. -_-'
